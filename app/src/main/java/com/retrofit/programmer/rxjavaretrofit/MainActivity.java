@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 });*/
 
                 //with RxJAVA
-                 final Observable<Model> observable = apiInterface.getData();
+                Observable<Model> observable = apiInterface.getData();
 
                 observable.subscribeOn(Schedulers.newThread())
                         .observeOn(AndroidSchedulers.mainThread())
